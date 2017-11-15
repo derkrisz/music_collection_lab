@@ -3,7 +3,7 @@ require_relative('./models/artist.rb')
 
 
 artist1 = Artist.new({ 'name' => 'Ozzy'})
-artist1.save()
+# artist1.save()
 
 album1 = Album.new(
   {
@@ -22,5 +22,7 @@ album2 = Album.new(
     }
 )
 
-album1.save()
-album2.save()
+# album1.save()
+# album2.save()
+
+p Album.list()

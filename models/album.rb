@@ -30,6 +30,10 @@ class Album
     @id = SqlRunner.run(sql, values)[0]["id"].to_i
   end
 
-
+  def self.list()
+    sql = "SELECT * FROM albums"
+    albums = SqlRunner.run(sql)
+    return albums.map { |albums| Album.new(albums) }
+  end
 
 end
