@@ -1,7 +1,12 @@
 require('pg')
 require_relative('../db/sql_runner')
 
+
+
 class Album
+
+  attr_accessor :artist_id, :title
+  attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
