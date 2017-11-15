@@ -8,7 +8,8 @@ artist1.save()
 album1 = Album.new(
   {
     'title' => 'Blizzard of Ozz',
-    'genre' => 'Metal'
+    'genre' => 'Metal',
+    'artist_id' => artist1.id
 
   }
 )
@@ -16,6 +17,10 @@ album1 = Album.new(
 album2 = Album.new(
   {
     'title' => 'Diary of a madman',
-    'genre' => 'Rock'
+    'genre' => 'Rock',
+    'artist_id' => artist1.id
     }
 )
+
+album1.save()
+album2.save()
